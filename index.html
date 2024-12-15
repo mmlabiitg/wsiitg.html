@@ -11731,7 +11731,34 @@ td {
   /* background: -webkit-linear-gradient(top,  #5D0089 0%, #00326D 100%); */
 }
 
+    /* Container for the news feed */
+    .news-feed-container {
+      width: 800px;
+      overflow: hidden; /* Hide overflow content */
+      position: relative;
+      height: 50px; /* Adjust height as needed */
+      background-color: transparent; /* Background color for the feed area */
+      margin: 0 auto; /* Center horizontally if needed */
+    }
 
+    /* Text to scroll */
+    .news-text {
+      color: yellow; /* Text color */
+      white-space: nowrap; /* Prevent line breaks */
+      position: absolute; /* Position absolutely for animation */
+      font-size: 1.2em; /* Adjust font size as needed */
+      animation: scroll-left 20s linear infinite; /* Animation properties */
+    }
+
+    /* Keyframes for scrolling from right to left */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+      }
+      100% {
+        transform: translateX(-100%); /* Move completely to the left */
+      }
+    }
 
     </style>
 </head>
@@ -11783,7 +11810,11 @@ td {
             <div class="carousel-item active">
                 <header class="masthead">
                     <div class="container">
-                        <!-- <div class="masthead-subheading">AISS 2024</div>-->
+                          <div class="news-feed-container">
+                            <div class="news-text">
+                              <b><i>Lecture videos will be made available for the registered candidates after the school</i></b>
+                            </div>
+                          </div>
                         <div class="masthead-heading text-uppercase">
                             <span>Winter School on Deep Learning for Vision and Language Modelling</span>
                         </div>
