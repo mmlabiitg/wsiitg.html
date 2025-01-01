@@ -11788,7 +11788,18 @@ td {
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
-        </div>
+        </div>        
+        <script>
+            // Ensures proper toggling of navbar on small screens
+            document.addEventListener("DOMContentLoaded", function () {
+                const navbarToggler = document.querySelector(".navbar-toggler");
+                const navbarCollapse = document.querySelector(".navbar-collapse");
+    
+                navbarToggler.addEventListener("click", function () {
+                    navbarCollapse.classList.toggle("show");
+                });
+            });
+        </script>
     </nav>
     <!-- Masthead-->
 
