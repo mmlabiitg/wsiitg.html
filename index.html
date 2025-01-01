@@ -11828,45 +11828,55 @@ td {
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <header class="masthead">
+                    
                     <div class="container">
                         <div class="masthead-heading text-uppercase">
                             <span>Winter School on Deep Learning for Vision and Language Modelling</span>
                         </div>
-                        <!-- <div class="masthead-subheading"></div>
-                        <div class="text-notification"><b>Notification:</b> The organizing team is keeping close watch
-                            on the flood situation in New Delhi. At this point no area in Okhla Ph 3 has any
-                            water-logging and there is no advisory from the Government of NCT of Delhi for restrictions
-                            on the organization of events on the planned dates. The latest updates suggest
-                            that the water level in river Yamuna has already started receding. Accordingly, there
-                            is no change in the plan for AISS 2024.</div>
-                        <div class="masthead-subheading"></div>
-                        <div class="masthead-subheading"></div> -->
                         <b>
                             <div class="masthead-subheading">6th-13th January 2025</div>
                         </b>
-                        <hr>
-                        <a class="btn btn-primary btn-xl text-uppercase register-button" style="border: none;"
-                            href="#register">Register<br> by 4<sup>th</sup> January 2025</a>
-                        <div class="counterContainer ">
-                            <div id="counter">
-                                <div>
-                                    <div class="box" id="days">0</div>
-                                    <p>Days</p>
-                                </div>
-                                <div>
-                                    <div class="box" id="hours">0</div>
-                                    <p>Hours</p>
-                                </div>
-                                <div>
-                                    <div class="box" id="minutes">0</div>
-                                    <p>Minutes</p>
-                                </div>
-                                <div>
-                                    <div class="box" id="seconds">0</div>
-                                    <p>seconds</p>
-                                </div>
+                    <div class="container" id="register-counter">
+                            <div class="counterContainer ">
+                                <a class="btn btn-primary btn-xl text-uppercase register-button" href="#register">
+                                    Register Now
+                                </a>
+                            <br>
+                                Registration ends in<br> 
+                                <span id="days">0</span>
+                                <span id="hours">0</span>
+                                <span id="minutes">0</span>
+                                <!-- <span id="seconds">0</span> -->
                             </div>
-                        </div>
+                    </div>
+                    <script>
+                        function countdown() {
+                            // Target date: 5th January 2025, 12:00 PM IST
+                            const targetDate = new Date('2025-01-05T06:30:00Z'); // IST is UTC+5:30
+                            // const targetDate = new Date('2024-12-31T13:51:00Z'); // IST is UTC+5:30
+                            
+                            const now = new Date();
+                            const timeDifference = targetDate - now;
+                
+                            if (timeDifference > 0) {
+                                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+                
+                                document.getElementById("days").textContent = days + " days";
+                                document.getElementById("hours").textContent = hours + " hrs";
+                                document.getElementById("minutes").textContent = minutes + " mins";
+                                document.getElementById("seconds").textContent = seconds + " secs";
+                            } else {
+                                // If the target date has passed
+                                document.getElementById("register-counter").style.display = "none";
+                            }
+                        }
+                
+                        // Update the countdown every second
+                        setInterval(countdown, 1000);
+                    </script>
                     </div>
                 </header>
             </div>
