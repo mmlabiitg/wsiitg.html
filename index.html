@@ -11837,10 +11837,10 @@ td {
                                 </a>
                             <br>
                                 Registration ends in<br> 
-                                <span id="days">0</span>
-                                <span id="hours">0</span>
-                                <span id="minutes">0</span>
-                                <!-- <span id="seconds">0</span> -->
+                                <span id="Register-days">0</span>
+                                <span id="Register-hours">0</span>
+                                <span id="Register-minutes">0</span>
+                                <!-- <span id="Register-seconds">0</span> -->
                             </div>
                     </div>
                     <script>
@@ -11858,10 +11858,10 @@ td {
                                 const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
                                 const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
                 
-                                document.getElementById("days").textContent = days + " days";
-                                document.getElementById("hours").textContent = hours + " hrs";
-                                document.getElementById("minutes").textContent = minutes + " mins";
-                                document.getElementById("seconds").textContent = seconds + " secs";
+                                document.getElementById("Register-days").textContent = days + " days";
+                                document.getElementById("Register-hours").textContent = hours + " hrs";
+                                document.getElementById("Register-minutes").textContent = minutes + " mins";
+                                document.getElementById("Register-seconds").textContent = seconds + " secs";
                             } else {
                                 // If the target date has passed
                                 document.getElementById("register-counter").style.display = "none";
