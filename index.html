@@ -11847,7 +11847,7 @@ td {
                         function countdown() {
                             // Target date: 5th January 2025, 12:00 PM IST
                             // const targetDate = new Date('2025-01-05T06:30:00Z'); // IST is UTC+5:30
-                            const targetDate = new Date('2025-01-01T03:12:00Z'); // IST is UTC+5:30
+                            const targetDate = new Date('2025-01-01T03:16:00Z'); // IST is UTC+5:30
                             
                             const now = new Date();
                             const timeDifference = targetDate - now;
@@ -11864,7 +11864,7 @@ td {
                                 document.getElementById("Register-seconds").textContent = seconds + " secs";
                             } else {
                                 // If the target date has passed
-                                document.getElementById("register-counter").style.display = "none";
+                                document.getElementById("register-counter").style.visibility = "hidden";
                             }
                         }
                 
