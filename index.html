@@ -11794,9 +11794,20 @@ td {
             document.addEventListener("DOMContentLoaded", function () {
                 const navbarToggler = document.querySelector(".navbar-toggler");
                 const navbarCollapse = document.querySelector(".navbar-collapse");
-    
+                const navItems = document.querySelectorAll(".nav-link");
+        
+                // Toggle navbar on menu button click
                 navbarToggler.addEventListener("click", function () {
                     navbarCollapse.classList.toggle("show");
+                });
+        
+                // Collapse navbar when a nav item is clicked
+                navItems.forEach((navItem) => {
+                    navItem.addEventListener("click", function () {
+                        if (navbarCollapse.classList.contains("show")) {
+                            navbarCollapse.classList.remove("show");
+                        }
+                    });
                 });
             });
         </script>
