@@ -11864,6 +11864,8 @@ td {
                             } else {
                                 // If the target date has passed
                                 document.getElementById("register-counter").style.visibility = "hidden";
+                                document.getElementById("registration-open").style.display = "none";
+                                document.getElementById("registration-close").style.display = "block";
                             }
                         }
                 
@@ -12384,30 +12386,37 @@ td {
                     <h2 class="text-center-asli-wala">Registration</h2>
                     <div class="text-center-asli-wala">
                         <div class="text-justify">
-                              <p class="text-muted">
-                                    <h4>Fee details</h4>
-                                              <b>Students / Faculties :</b> 2,000 INR <br>
-                                              <b>Foreign Participants / Industry Personnel :</b> 10,000 INR <br>
-                                              <it>(same for online and offline)</it><br>
-                                    <div style="height: 2rem;"></div>
-                                    <h4>Bank Details</h4>
-                                            <b>Beneficiary Name:</b> IITG TIDF <br>
-                                            <b>Bank Name:</b> Canara Bank <br>
-                                            <b>Branch Name:</b> IIT Guwahati <br>
-                                            <b>IFSC Code:</b> CNRB0008652 <br>
-                                            <b> Account Number:</b> 8652101030401 <br>
-                                            <b style="color: red; font-weight: bold;"> We are currently verifying payments with the bank before sending out registration confirmations. This process may take some time, and there could be delays in issuing confirmations.
-We kindly ask all applicants for their patience as we work diligently to complete the verification process. Thank you for your understanding and cooperation.</b>
-                              </p>
+                          <div id="registration-open">
+                                <p class="text-muted">
+                                  <h4>Fee details</h4>
+                                            <b>Students / Faculties :</b> 2,000 INR <br>
+                                            <b>Foreign Participants / Industry Personnel :</b> 10,000 INR <br>
+                                            <it>(same for online and offline)</it><br>
+                                  <div style="height: 2rem;"></div>
+                                  <h4>Bank Details</h4>
+                                          <b>Beneficiary Name:</b> IITG TIDF <br>
+                                          <b>Bank Name:</b> Canara Bank <br>
+                                          <b>Branch Name:</b> IIT Guwahati <br>
+                                          <b>IFSC Code:</b> CNRB0008652 <br>
+                                          <b> Account Number:</b> 8652101030401 <br>
+                                          <b style="color: red; font-weight: bold;"> We are currently verifying payments with the bank before sending out registration confirmations. This process may take some time, and there could be delays in issuing confirmations.
+    We kindly ask all applicants for their patience as we work diligently to complete the verification process. Thank you for your understanding and cooperation.</b>
+                                  </p>
+                                  <div style="height: 4rem;"></div>
+                                  <div class="text-center-asli-wala">
+                                      Please make the payment via the details given above and fill up the <a href='https://forms.gle/Jne3KHLudcp6sShj7' style="color: black; font-weight: bold;">form</a><br>
+                                      <!--<iframe
+                                          src="https://forms.gle/Jne3KHLudcp6sShj7/preview?usp=drivesdk"
+                                          width="550" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
+                                      <!--<a href='https://forms.gle/Jne3KHLudcp6sShj7'><img src="assets/img/team/Participant Details form QR.png" width="100"></img></a>-->
+                                  </div>
+                          </div>
+                          <div id="registration-close" style="display:none;">
+                                  <p class="text-muted">
+                                  <h4 style="color: red;">Registration is closed</h4>
+                                  </p>
+                          </div>
                         </div>
-                    </div>
-                    <div style="height: 4rem;"></div>
-                    <div class="text-center-asli-wala">
-                        Please make the payment via the details given above and fill up the <a href='https://forms.gle/Jne3KHLudcp6sShj7' style="color: black; font-weight: bold;">form</a><br>
-                        <!--<iframe
-                            src="https://forms.gle/Jne3KHLudcp6sShj7/preview?usp=drivesdk"
-                            width="550" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
-                        <!--<a href='https://forms.gle/Jne3KHLudcp6sShj7'><img src="assets/img/team/Participant Details form QR.png" width="100"></img></a>-->
                     </div>
         </div>
         </div>
