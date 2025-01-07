@@ -11752,6 +11752,33 @@ td {
         .counterContainer{
             margin-top: 2rem;
         }
+
+        .notice-box {
+          position: relative;
+          padding: 10px;
+          border: 2px solid white;
+          border-radius: 10px;
+          background-color: #f9f9f9; /* Light gray background */
+          color: #333; /* Text color */
+          margin: 20px auto;
+          max-width: 600px;
+          text-align: center;
+        }
+
+        .notice-label {
+          position: absolute;
+          top: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: white;
+          color: #333;
+          font-weight: bold;
+          padding: 2px 10px;
+          border-radius: 10px;
+          font-size: 14px;
+          border: 2px solid #333;
+        }
+
     </style>
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="Cailogo_update_1.png" />
@@ -11836,27 +11863,29 @@ td {
                                     Register Now
                                 </a>
                             <br>
-                                Registration ends in<br> 
+                                <!-- Registration ends in<br> 
                                 <span id="Register-days">0</span>
-                                <span id="Register-hours">0</span>
-                                <span id="Register-minutes">0</span>
-                                <!-- <span id="Register-seconds">0</span> -->
+                                <span id="Register-hours"></span>
+                                <span id="Register-minutes"></span>
+                                <span id="Register-seconds"></span> -->
                             </div>
                     </div>
                     <script>
                         function countdown() {
-                            // Target date: 5th January 2025, 12:00 PM IST
-                            const targetDate = new Date('2025-01-05T08:30:00Z'); // IST is UTC+5:30
+                            const targetDate = new Date('2025-01-08T08:30:00Z'); // IST is UTC+5:30
                             
                             const now = new Date();
                             const timeDifference = targetDate - now;
                 
+                            // alert("timeDifference "+timeDifference);
                             if (timeDifference > 0) {
                                 const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
                                 const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                                 const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
                                 const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
                 
+                                // alert("days "+days+"hours "+hours+"minutes "+minutes+"seconds "+seconds);
+
                                 document.getElementById("Register-days").textContent = days + " days";
                                 document.getElementById("Register-hours").textContent = hours + " hrs";
                                 document.getElementById("Register-minutes").textContent = minutes + " mins";
@@ -11872,8 +11901,16 @@ td {
                         // Update the countdown every second
                         setInterval(countdown, 1000);
                     </script>
-                        <br> <b style="color: yellow; font-weight: bold;"> Participants are requested to bring their laptops for the hands-on sessions.</b>
-                        <br> <b style="color: yellow; font-weight: bold;"> <a href='https://www.google.com/maps/dir//26.1857946,91.6914697/@26.1856087,91.6913844,19.65z/data=!4m2!4m1!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D'>Offline Classroom Venue</a></b>
+                        <!-- <br> <b style="color: yellow; font-weight: bold;"> Participants are requested to bring their laptops for the hands-on sessions.</b> -->
+                        <div class="notice-box">
+                          <div class="notice-label">NOTICE</div>
+                          <p>
+                            <b> Due to popular demand, registration is open for an additional 24 hours till 8th January, 2025, 2 pm IST.</b><br>
+                            <b> - Participation Mode:</b> Online only<br>
+                            <b> - Registration Fee:</b> ₹2000 (no late fee)<br>
+                            Don’t miss this final opportunity to join!
+                          </p>
+                        </div>
                     </div>
                 </header>
             </div>
@@ -12096,7 +12133,7 @@ td {
                 <div style="height: 2rem;"></div>
 
                  <div class="row people ">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Bchanda_round.png" alt="..." />
                         <h4>Prof. Bhabatosh Chanda</h4>
@@ -12113,7 +12150,7 @@ td {
                       </div>
                     </div>
                      
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Pmitra_round.png" alt="..." />
                         <h4>Prof. Pabitra Mitra</h4>
@@ -12129,7 +12166,7 @@ td {
                         </div>
                     </div>
                      
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Dbhowmick_round.png" alt="..." />
                         <h4>Prof. Deepayan Bhowmik</h4>
@@ -12144,9 +12181,8 @@ td {
                                 aria-label="Prof Deepayan Bhowmik Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                 </div>
-                 <div class="row people ">
-                    <div class="col-md-4">
+
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Sdandapat_round.png" alt="..." />
                         <h4>Dr. Sandipan Dandapat</h4>
@@ -12160,7 +12196,10 @@ td {
                                 aria-label="Dr. Sandipan Dandapat google scholar Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                 </div>
+                 
+                 <div class="row people ">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/DPdogra_round.png" alt="..." />
                         <h4>Dr. Debi Prasad Dogra</h4>
@@ -12176,7 +12215,7 @@ td {
                         </div>
                     </div>
                      
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/image.png" alt="..." />
                         <h4>Dr. Soujanya Poria</h4>
@@ -12191,10 +12230,8 @@ td {
                                 aria-label="Dr. Soujanya Poria Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                </div>
-                
-                <div class="row people ">
-                    <div class="col-md-6">
+                    
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Skumar_round.png" alt="..." />
                         <h4>Dr. Satish Kumar</h4>
@@ -12208,7 +12245,7 @@ td {
                                 aria-label="Dr. Satish Kumar linkedin Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                       <div class="team-member">
                         <img class="mx-auto rounded-circle" src="assets/img/team/Sgaj_round.png" alt="..." />
                         <h4>Dr. Sibaji Gaj</h4>
@@ -12392,7 +12429,7 @@ td {
                                   <h4>Fee details</h4>
                                             <b>Students / Faculties :</b> 2,000 INR <br>
                                             <b>Foreign Participants / Industry Personnel :</b> 10,000 INR <br>
-                                            <i>(same for online and offline)</i><br>
+                                            <it>(same for online and offline)</it><br>
                                   <div style="height: 2rem;"></div>
                                   <h4>Bank Details</h4>
                                           <b>Beneficiary Name:</b> IITG TIDF <br>
@@ -12400,12 +12437,14 @@ td {
                                           <b>Branch Name:</b> IIT Guwahati <br>
                                           <b>IFSC Code:</b> CNRB0008652 <br>
                                           <b> Account Number:</b> 8652101030401 <br>
-                                          <b style="color: red; font-weight: bold;"> We are currently verifying payments with the bank before sending out registration confirmations. This process may take some time, and there could be delays in issuing confirmations.
-    We kindly ask all applicants for their patience as we work diligently to complete the verification process. Thank you for your understanding and cooperation.</b>
+                                          <b style="color: red; font-weight: bold; font-size: 1.5em"> 
+                                            <!-- We are currently verifying payments with the bank before sending out registration confirmations. This process may take some time, and there could be delays in issuing confirmations. We kindly ask all applicants for their patience as we work diligently to complete the verification process. Thank you for your understanding and cooperation. -->
+                                            Extended registration is for online participation only.
+                                          </b>
                                   </p>
                                   <div style="height: 4rem;"></div>
                                   <div class="text-center-asli-wala">
-                                      Please make the payment via the details given above and fill up the <a href='https://forms.gle/Jne3KHLudcp6sShj7' style="color: black; font-weight: bold;">form</a><br>
+                                      Please make the payment via the details given above, fill up the <a href='https://forms.gle/Jne3KHLudcp6sShj7' style="color: black; font-weight: bold;">form</a>, and send a whatsapp message to +91 6297669108 to get the confirmation mail and meeting links. We appriciate your interest in our school.<br>
                                       <!--<iframe
                                           src="https://forms.gle/Jne3KHLudcp6sShj7/preview?usp=drivesdk"
                                           width="550" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
@@ -12448,39 +12487,39 @@ td {
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>6th January<br>(Monday)</b></td>
+                      <td>Expert<br>Lecture</td>
                       <td style="color: lightgreen; font-weight: bold;">Inauguration</td>
-                      <td><i>Expert<br>Lecture</i></td>
-                      <td>ML Basics - I</td>
-                      <td>ML Basics - II</td>
+                      <td>ML Basics</td>
+                      <td>ML Basics</td>
                       <td>Hands-on</td>
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>7th January<br>(Tuesday)</b></td>
+                      <td>Expert<br>Lecture</td>
                       <td>DL Basics</td>
                       <td>CNN - I</td>
                       <td>CNN - II</td>
-                      <td><i>Expert<br>Lecture</i></td>
                       <td>Hands-on</td>
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>8th January<br>(Wednesday)</b></td>
+                      <td>Expert<br>Lecture</td>
                       <td>Sequential<br>Modelling - I</td>
-                      <td><i>Expert<br>Lecture</i></td>
                       <td>Sequential<br>Modelling - II</td>
                       <td>Sequential<br>Modelling - III</td>
                       <td>Hands-on</td>
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>9th January<br>(Thursday)</b></td>
-                      <td><i>Expert<br>Lecture</i></td>
+                      <td>Expert<br>Lecture</td>
                       <td>DL for Vision - I</td>
                       <td>DL for Vision - II</td>
                       <td>DL for Vision - III</td>
-                      <td>DL for Vision - IV <br> & Hands-on</td>
+                      <td>Hands-on</td>
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>10th January<br>(Friday)</b></td>
-                      <td><i>Expert<br>Lecture</i></td>
+                      <td>Expert<br>Lecture</td>
                       <td>DL for NLP - I</td>
                       <td>DL for NLP - II</td>
                       <td>DL for NLP - III</td>
@@ -12488,7 +12527,7 @@ td {
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>11th January<br>(Saturday)</b></td>
-                      <td><i>Expert<br>Lecture</i></td>
+                      <td>Expert<br>Lecture</td>
                       <td>Generative AI - I</td>
                       <td>Generative AI - II</td>
                       <td>Generative AI - III</td>
@@ -12496,18 +12535,18 @@ td {
                     </tr>
                     <tr style="border-bottom: 1px solid black;">
                       <td><b>12th January<br>(Sunday)</b></td>
-                      <td><i>Expert<br>Lecture</i></td>
-                      <td>DL for<br> Video Analysis - I</td>
-                      <td>DL for<br> Video Analysis - II</td>
+                      <td>Expert<br>Lecture</td>
+                      <td>DL for<br>Network</td>
+                      <td>DL for<br>Vehicular Network</td>
                       <td>DL for<br>Cyber Security</td>
                       <td>Hands-on</td>
                     </tr>
                     <tr>
                       <td><b>13th January<br>(Monday)</b></td>
-                      <td><i>Expert<br>Lecture</i></td>
-                      <td>DL for<br>Biomedical Imaging</td>
-                      <td>Fairness in AI</td>
+                      <td>Expert<br>Lecture</td>
                       <td>Explainable AI</td>
+                      <td>Fairness in AI</td>
+                      <td>DL Applications</td>
                       <td style="color: orange; font-weight: bold;">Valedictory</td>
                     </tr>
                   </table>
@@ -12536,8 +12575,8 @@ td {
                             <h4>6th January (Monday), 2025</h4>
                         </div>
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><span style="color: lightgreen; font-weight: bold;">Inauguration</span><br><br>
-                              <b>10:00 - 11:00 AM</b><br><i>Expert Lecture</i><br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
+                              <b>10:00 - 11:00 AM</b><br> Inauguration<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br> ML Basics - I<br><br>
                               <b>12:30 - 1:30 PM</b><br> ML Basics - II<br><br>
@@ -12549,11 +12588,11 @@ td {
                             <h4>7th January (Tuesday), 2025</h4>
                         </div>
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br> DL Basics<br><br>
-                              <b>10:00 - 11:00 AM</b><br> CNN - I<br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
+                              <b>10:00 - 11:00 AM</b><br> DL Basics<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
-                              <b>11:30 AM - 12:30 PM</b><br> CNN - II<br><br>
-                              <b>12:30 - 1:30 PM</b><br> <i>Expert Lecture</i><br><br>
+                              <b>11:30 AM - 12:30 PM</b><br> CNN - I<br><br>
+                              <b>12:30 - 1:30 PM</b><br> CNN - II<br><br>
                               <b>1:30 - 3:00 PM</b><br> Lunch<br><br>
                               <b>3:00 - 5:00 PM</b><br> Hands-on<br><br>
                       </p>                       
@@ -12562,8 +12601,8 @@ td {
                             <h4>8th January (Wednesday), 2025</h4>
                         </div>
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br> Sequential Modelling - I<br><br>
-                              <b>10:00 - 11:00 AM</b><br> <i>Expert Lecture</i><br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
+                              <b>10:00 - 11:00 AM</b><br> Sequential Modelling - I<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br> Sequential Modelling - II<br><br>
                               <b>12:30 - 1:30 PM</b><br> Sequential Modelling - III<br><br>
@@ -12579,13 +12618,13 @@ td {
                             <h4>9th January (Thursday), 2025</h4>
                         </div>    
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><i>Expert Lecture</i><br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
                               <b>10:00 - 11:00 AM</b><br> DL for Vision - I<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br> DL for Vision - II<br><br>
                               <b>12:30 - 1:30 PM</b><br> DL for Vision - III<br><br>
                               <b>1:30 - 3:00 PM</b><br> Lunch<br><br>
-                              <b>3:00 - 5:00 PM</b><br> DL for Vision - IV & Hands-on<br><br>
+                              <b>3:00 - 5:00 PM</b><br> Hands-on<br><br>
                       </p>  
                         
                         <!-- 10th January (Friday) -->
@@ -12595,7 +12634,7 @@ td {
                         </div>
                         
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><i>Expert Lecture</i><br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
                               <b>10:00 - 11:00 AM</b><br> DL for NLP - I<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br> DL for NLP - II<br><br>
@@ -12611,7 +12650,7 @@ td {
                         </div>
                         
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><i>Expert Lecture</i><br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
                               <b>10:00 - 11:00 AM</b><br> Generative AI - I<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br> Generative AI - II<br><br>
@@ -12627,10 +12666,10 @@ td {
                         </div>
                         
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><i>Expert Lecture</i><br><br>
-                              <b>10:00 - 11:00 AM</b><br> DL for Video Analysis - I<br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
+                              <b>10:00 - 11:00 AM</b><br> DL for Network<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
-                              <b>11:30 AM - 12:30 PM</b><br>DL for Video Analysis - II<br><br>
+                              <b>11:30 AM - 12:30 PM</b><br>DL for Vehicular Network<br><br>
                               <b>12:30 - 1:30 PM</b><br> DL for Cyber Security<br><br>
                               <b>1:30 - 3:00 PM</b><br> Lunch<br><br>
                               <b>3:00 - 5:00 PM</b><br> Hands-on<br><br>
@@ -12642,13 +12681,13 @@ td {
                             <h4>13th January (Monday), 2025</h4>
                         </div>
                       <p  class="section-subheading Home text-muted" >
-                              <b>9:00 - 10:00 AM</b><br><i>Expert Lecture</i><br><br>
-                              <b>10:00 - 11:00 AM</b><br>DL for Biomedical Imaging<br><br>
+                              <b>9:00 - 10:00 AM</b><br> Expert Lecture<br><br>
+                              <b>10:00 - 11:00 AM</b><br>Explainable AI<br><br>
                               <b>11:00 - 11:30 AM</b><br> High Tea<br><br>
                               <b>11:30 AM - 12:30 PM</b><br>Fairness in AI<br><br>
-                              <b>12:30 - 1:30 PM</b><br>Explainable AI<br><br>
+                              <b>12:30 - 1:30 PM</b><br> DL Applications<br><br>
                               <b>1:30 - 3:00 PM</b><br> Lunch<br><br>
-                              <b>3:00 - 5:00 PM</b><br> <span style="color: orange; font-weight: bold;">Valedictory</span><br><br>
+                              <b>3:00 - 5:00 PM</b><br> Valedictory<br><br>
                       </p> 
 
                 </div>
@@ -12671,26 +12710,25 @@ td {
                 <h2 class="section-heading text-uppercase">Accomodation</h2>
                 <div style="height: 2rem;"></div>
                 <div class="text-center">
-
-                                <p>
-                                    Double-occupancy rooms with common washrooms are reserved for the participants at ₹200/day in the institute hostels between 5<sup>th</sup> to 14<sup>th</sup> January. For calculating the number of days, <b>each calendar date is counted</b>. For example, a check-in on 5th January at 11 PM and check-out on 14th January at 1 AM will be counted as 10 days.<br>
-                                    Please make the payment via the details given below and fill up the <a href='https://forms.gle/QWURxY2HC5rnQeBD6' style="color: black; font-weight: bold;">form</a><br>.
-                                  <div style="height: 2rem;"></div>
-                                  <h4>Bank Details</h4>
-                                          <b>Beneficiary Name:</b> HAB General <br>
-                                          <b>Bank Name:</b> ICICI Bank <br>
-                                          <b>Branch Name:</b> IIT Guwahati <br>
-                                          <b>IFSC Code:</b> ICIC0003325 <br>
-                                          <b> Account Number:</b> 332501001160 <br>
-                                  <div style="height: 2rem;"></div>
-                                    Mattresses, blankets, and other essentials are available for rent at ₹75/day, which must be <b>paid at the hostel</b> upon arrival. Please bring a lock and key for your room. <br>
-                                  <div style="height: 2rem;"></div>
-                                    Breakfast, lunch, and dinners are available at the mess of any hostel, including the one you will be staying in. Rates are ₹60 for breakfast, ₹75 for lunch, ₹75 for dinner, and ₹100 for special Dinner (available on Wednesdays and Sundays). Alternatively, you may opt for food from the canteens available in each hostel.
-                                    <div style="height: 2rem;"></div>
-                                    Participants can enter the campus through either of the two gates: <b>Main Gate</b> or <b>KV Gate</b>. Entry requires an institute ID card and a <b>valid national ID</b> such as a Voter ID or Aadhar Card. <b>Note:</b> KV Gate is closed from 10 PM to 6 AM; during this time, please use the Main Gate.
-                                  </p>
-
+                    <p class="section-subheading Home text-muted" >
+                        A limited number of rooms in the institute hostels are reserved for the participants between 5<sup>th</sup> to 14<sup>th</sup> January.
+                        This is a low-cost option and is available on a first-come-first-served basis. 
+                        A participant will directly pay their accommodation cost to the hostel. 
+                        Other options for accommodation are the guest house of the institute and the hotels close to the institute. 
+                        Please <a href='https://mmlabiitg.github.io/wsiitg.html/#contact' style="color: black; font-weight: bold;">mail us (at suklav@iitg.ac.in)</a> to book a hostel room or if you need support for other accommodation options. 
+                        Payment for the accommodation will be made directly on the spot.
+                    </p>
                 </div>
+                    <div style="height: 2rem;"></div>
+                    <div class="text-center-asli-wala">
+                        <div class="text-justify">
+                              <p class="text-muted">
+                                    <h4>Room Charges</h4>
+                                              <b>INR 200 (approx.) per day per person</b> with common washroom <br>
+                                              <b>INR 300 (approx.) per day per person</b> with attached washroom <br>
+                              </p>
+                        </div>
+                    </div>
                 <div style="height: 4rem;"></div>
                 </div>
             </div>
